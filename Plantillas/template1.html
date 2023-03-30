@@ -9,6 +9,30 @@
 <body>
     <h1>PRIMERA PLANTILLA DE JAVIS</h1>
     <P>Este es el contenido de la Plantilla 51325</P>
+
+    <P style="color:red">Nombre= {{ nombre }}</P>
+    <P style="color:blue">Apellido= {{ apellido }}</P>
+    <P style="color:rgb(255, 0, 157)">Edad= {{ edad }}</P>
+
+    <P>Monstrando la Lista de Notas= {{ lista }}</P>
+
+    <P>LISTA DE NOTAS</P>
+
+    <UL>
+        {% for nota in lista %}
+
+        {% if nota > 5 %}
+        <li style="color:green"> NOTA APROBADA: {{ nota }} </li>
+
+        {% else %}
+        <li style="color:red"> NOTA DESAPROBADA: {{ nota }} </li>
+
+        {% endif %}
+
+        {% endfor %}
+    </UL>
+
+
     
 </body>
 </html>
