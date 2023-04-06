@@ -27,18 +27,7 @@ def calcula_anio_nacimiento(request, edad):
     anio_nacimiento = anio_actual- int(edad)
     return HttpResponse(f"Usted nacio en el año {anio_nacimiento}")
 
-
-
-def probandoHtml(request):
-
-    diccionario= {"nombre":"Javier","apellido":"Caramella Boubet","edad":40, "lista":[10,5,2,7,8,3,8,10]}
-
-    template = loader.get_template("template1.html")
-    documento = template.render(diccionario)    
-
-    return HttpResponse(documento)
-
-
+"""  # COMENTAMOS Y ABAJO RESOLVEMOS EN MENOS LINEAS DE CÓDIGO, BASICAMENTE LO SIMPLIFICAMOS. AHORRAMOS RECURSOS Y QUEDA MAS PROLIJO EL CODIGO.
 #def probandoHtml(request):
 
 #    diccionario= {"nombre":"Javier","apellido":"Caramella Boubet","edad":40, "lista":[10,5,2,7,8,3,8,10]}
@@ -54,5 +43,19 @@ def probandoHtml(request):
 #    contexto = Context(diccionario)
 #    documento = template.render(contexto)
 #    return HttpResponse(documento)
+
+"""
+
+def probandoHtml(request):
+
+    diccionario= {"nombre":"Javier","apellido":"Caramella Boubet","edad":40, "lista":[10,5,2,7,8,3,8,10]}
+
+    template = loader.get_template("template1.html")
+    documento = template.render(diccionario)    
+
+    return HttpResponse(documento)
+
+
+
 
 
